@@ -1,5 +1,28 @@
+
+console.log("paparia")
 export default function Home() {
+  console.log("paparia22");
+  var theuser= process.env.usernameForDB; // "239482"
+  var thepassword= process.env.passwordForDB; // "foobar"
+  var thehost= process.env.mydbHost; // "239482"
+  var theport= process.env.port; // "foobar"
+
+  const mysql = require('mysql');
+  const connection = mysql.createConnection({
+  host: thehost,
+  user: theuser,
+  password: thepassword,
+  port: theport,
+  database: 'mytrades_all'
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected to MySQL Server!');
+});
+
   return (
+    
     <div className="min-h-screen lg:flex text-lg">
       {/* left side */}
       <div className="lg:w-1/2 relative z-10 flex flex-col justify-center px-10 lg:px-20 py-20 lg:py-0 text-left">
