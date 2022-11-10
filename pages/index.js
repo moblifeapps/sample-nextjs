@@ -11,7 +11,7 @@ export default function Home() {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Deploy API routes, static frontend, databases, and more.
+          Deploy aaa API routes, static frontend, databases, and more.
         </p>
 
         <div className="sm:flex">
