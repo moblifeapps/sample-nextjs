@@ -1,3 +1,5 @@
+import "mysql";
+//require(mysql);
 
 console.log("paparia")
 export default function Home() {
